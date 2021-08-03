@@ -1,0 +1,208 @@
+/* apply a natural box layout model to all elements, but allowing components to change */
+html {
+    box-sizing: border-box;
+    /*  con este codigo se reajusta el tamaño en los css para que px sea similar a rem para mayor facilidad  */
+    /*  1 Rem es igual a 10 PX*/
+    font-size: 62.55%;
+}
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+/* Variables */
+
+:root{
+    --colorNegro: rgba(78, 81, 80, 1);
+    --colorGris: rgba(169, 169, 169, 1);
+    --fondoGris: #E5E5E5;
+    --fuente: 'Montserrat', sans-serif;
+}
+
+/* Globales */
+
+p, h1{
+    font-family: var(--fuente);
+    color: var(--colorNegro);
+}
+
+img{
+    max-width: 100%;
+    border-radius: 2.4rem;
+}
+
+/* Utilidades */
+
+.contenedor {
+    width: min(90%, 120rem);
+    margin: 0 auto;
+}
+
+.img-cuadrada{
+    width: 10.9rem;
+    height: 10.9rem;
+}
+
+@media (min-width: 768px){
+    .img-cuadrada{
+        width: 30rem;
+        height: 30rem;
+    }
+}
+
+.img-ancha{
+    width: 22.9rem;
+    height: 10.9rem;
+}
+
+@media (min-width: 768px){
+    .img-ancha{
+        width: 62.7rem;
+        height: 30rem;
+    }
+}
+
+.img-alta{
+    width: 10.9rem;
+    height: 23rem;
+}
+
+@media (min-width: 768px){
+    .img-alta{
+        width: 17.5rem;
+        height: 24.2rem;
+    }
+}
+
+/* header */
+
+.header{
+    width: min(50%, 120rem);
+    margin: 0 auto;
+    margin-top: 3rem;
+    margin-bottom: 4rem;
+}
+
+@media (min-width: 768px){
+    .header{
+        margin-top: 6rem;
+        margin-bottom: 6.4rem;
+    }
+}
+
+/* perfil */
+
+.perfil{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1.1rem;
+}
+
+@media (min-width: 768px){
+    /* Espacio entre imagen de perfil y el nombre */
+    .perfil{
+        margin-bottom: 1.6rem;
+    }
+}
+
+.perfil__img{
+    width: 10.1rem;
+    height: 10.1rem;
+}
+
+@media (min-width: 768px){
+    .perfil__img{
+        width: 15.6rem;
+        height: 15.6rem;
+    }
+}
+
+.perfil__info__nombre{
+    font-weight: 600;
+    font-size: 1.4rem;
+    text-align: center;
+    margin-bottom: 0;
+}
+
+@media (min-width: 768px){
+    .perfil__info__nombre{
+        font-size: 2.4rem;
+    }
+}
+
+.perfil__info__ciudad{
+    color: var(--colorGris);
+    font-size: 1rem;
+    text-align: center;
+    margin-top: .4rem;
+}
+
+@media (min-width: 768px){
+    .perfil__info__ciudad{
+        font-size: 1.4rem;
+        margin-top: 1;
+    }
+}
+
+.perfil-acerca{
+    display: flex;
+}
+
+.card{
+    padding: 1rem 1.2rem;
+    background-color: var(--fondoGris);
+    margin-right: 1rem;
+    border-radius: 1.2rem;
+    width: 7.8rem;
+    height: 5.2rem;
+}
+
+/* Elimina el margen derecho de la ultima card */
+.card:last-of-type{
+    margin-right: 0;
+}
+
+@media (min-width: 768px){
+    .card{
+        width: 10rem;
+        height: 6.7rem;
+    }
+}
+
+.perfil-acerca__post__numero,
+.perfil-acerca__follower__numero,
+.perfil-acerca__following__numero,
+.perfil-acerca__post__titulo,
+.perfil-acerca__follower__titulo,
+.perfil-acerca__following__titulo{
+    font-size: 1.2rem;
+    margin: 0;
+    text-align: center;
+}
+
+.perfil-acerca__post__titulo,
+.perfil-acerca__follower__titulo,
+.perfil-acerca__following__titulo{
+    color: var(--colorGris);
+    margin-top: .5rem;
+}
+
+
+
+
+/* Footer */
+
+.footer{
+    color: rgba(189, 189, 189, 1);
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+.footer p{
+    font-family: 'Montserrat', sans-serif;
+}
+
+.nombre{
+    font-weight: bold;
+}
